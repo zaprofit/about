@@ -3,98 +3,321 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zaprofit - About</title>
-    <meta name="description" content="Learn more about Zaprofit, an online tutoring platform for business and marketing education.">
-
+    <title>Zaprofit | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Basic CSS Styling */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
         }
-
-        header, nav, main, footer {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
+        .profile-shadow {
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
         }
-
-        header {
-            background-color: #0055a5;
-            color: white;
+        .stat-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
         }
-
-        nav {
-            background-color: #eee;
-            margin-top: 10px;
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background-color: #667eea;
         }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 20px;
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
         }
-
-        nav a {
-            text-decoration: none;
-            color: #0055a5;
-            font-weight: bold;
-        }
-
-        nav a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            background-color: white;
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 6px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #666;
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
         }
     </style>
-
-    <script>
-        // Basic JavaScript on page load
-        window.addEventListener('DOMContentLoaded', function () {
-            alert("Welcome to Zaprofit's About Page!");
-        });
-    </script>
 </head>
-<body>
-
-    <header>
-        <h1>About Zaprofit</h1>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="gradient-bg text-white">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-white flex items-center justify-center">
+                        <i class="fas fa-rocket text-2xl text-purple-600"></i>
+                    </div>
+                    <h1 class="text-2xl font-bold">Zaprofit</h1>
+                </div>
+                <nav class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#" class="hover:text-purple-200 transition">Home</a></li>
+                        <li><a href="#" class="hover:text-purple-200 transition">Posts</a></li>
+                        <li><a href="#" class="font-semibold border-b-2 border-white">About</a></li>
+                        <li><a href="#" class="hover:text-purple-200 transition">Gallery</a></li>
+                        <li><a href="#" class="hover:text-purple-200 transition">Contact</a></li>
+                    </ul>
+                </nav>
+                <button class="md:hidden text-white">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
     </header>
 
-    <nav aria-label="Main navigation">
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </nav>
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Profile Section -->
+        <section class="flex flex-col md:flex-row items-center justify-between mb-16 gap-8">
+            <div class="md:w-1/2 animate-float">
+                <div class="bg-white p-6 rounded-2xl profile-shadow">
+                    <div class="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-5xl text-white"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Zaprofit</h2>
+                    <p class="text-purple-600 text-center font-medium mb-4">Connecting People Worldwide</p>
+                    <div class="flex justify-center space-x-4 mb-6">
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 hover:bg-purple-600 hover:text-white transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2">
+                <h2 class="text-4xl font-bold text-gray-800 mb-6">About Our Community</h2>
+                <p class="text-gray-600 mb-6 leading-relaxed">
+                    Zaprofit is an online community dedicated to fostering meaningful connections and sharing inspiring content. 
+                    We're not just another social profile - we're a movement that celebrates creativity, diversity, and positive engagement.
+                </p>
+                <div class="grid grid-cols-2 gap-4 mb-6">
+                    <div class="bg-white p-4 rounded-lg shadow-md stat-card">
+                        <div class="text-purple-600 text-3xl mb-2">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">1.2M+</h3>
+                        <p class="text-sm text-gray-500">Active Members</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md stat-card">
+                        <div class="text-purple-600 text-3xl mb-2">
+                            <i class="fas fa-globe-americas"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">150+</h3>
+                        <p class="text-sm text-gray-500">Countries</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md stat-card">
+                        <div class="text-purple-600 text-3xl mb-2">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">5M+</h3>
+                        <p class="text-sm text-gray-500">Daily Interactions</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-md stat-card">
+                        <div class="text-purple-600 text-3xl mb-2">
+                            <i class="fas fa-hashtag"></i>
+                        </div>
+                        <h3 class="font-bold text-gray-800">10K+</h3>
+                        <p class="text-sm text-gray-500">Trending Topics</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <main>
-        <section>
-            <h2>What is Zaprofit?</h2>
-            <p>Zaprofit is a dynamic online tutoring platform that empowers individuals to master skills in business and marketing. Whether you're just starting out or looking to grow your expertise, Zaprofit offers practical, easy-to-follow guidance tailored to your needs.</p>
+        <!-- Mission Section -->
+        <section class="bg-gradient-to-r from-purple-50 to-blue-50 rounded-2xl p-8 md:p-12 mb-16">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Our Mission</h2>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    To create a safe, inclusive space where people from all walks of life can connect, share, and grow together. 
+                    We believe in the power of community to inspire positive change and meaningful relationships in the digital age.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-4 py-2 bg-white rounded-full text-purple-600 font-medium shadow-sm">#Connect</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-purple-600 font-medium shadow-sm">#Inspire</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-purple-600 font-medium shadow-sm">#Engage</span>
+                    <span class="px-4 py-2 bg-white rounded-full text-purple-600 font-medium shadow-sm">#GrowTogether</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Join Our Community?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Safe Environment</h3>
+                    <p class="text-gray-600">
+                        Our advanced moderation and community guidelines ensure a respectful space for everyone.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-lightbulb text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Creative Tools</h3>
+                    <p class="text-gray-600">
+                        Powerful creation tools to express yourself through posts, stories, and live events.
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <div class="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mb-4">
+                        <i class="fas fa-chart-line text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Growth Opportunities</h3>
+                    <p class="text-gray-600">
+                        Connect with like-minded individuals and grow your personal or professional network.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Section 
+        <section class="mb-16">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Journey</h2>
+            <div class="max-w-2xl mx-auto relative">
+                <div class="relative pl-8 mb-10 timeline-item">
+                    <div class="absolute left-0 w-6 h-6 rounded-full bg-purple-600 border-4 border-white -ml-3"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Founded in 2018</h3>
+                        <p class="text-gray-600 mb-2">Zaprofit was born from a simple idea: create meaningful connections in the digital space.</p>
+                        <span class="text-sm text-purple-600 font-medium">March 2018</span>
+                    </div>
+                </div>
+                <div class="relative pl-8 mb-10 timeline-item">
+                    <div class="absolute left-0 w-6 h-6 rounded-full bg-purple-600 border-4 border-white -ml-3"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">First 100K Members</h3>
+                        <p class="text-gray-600 mb-2">Our community reached its first major milestone just 8 months after launch.</p>
+                        <span class="text-sm text-purple-600 font-medium">November 2018</span>
+                    </div>
+                </div>
+                <div class="relative pl-8 mb-10 timeline-item">
+                    <div class="absolute left-0 w-6 h-6 rounded-full bg-purple-600 border-4 border-white -ml-3"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Mobile App Launch</h3>
+                        <p class="text-gray-600 mb-2">Expanded our reach with native iOS and Android applications.</p>
+                        <span class="text-sm text-purple-600 font-medium">June 2019</span>
+                    </div>
+                </div>
+                <div class="relative pl-8 timeline-item">
+                    <div class="absolute left-0 w-6 h-6 rounded-full bg-purple-600 border-4 border-white -ml-3"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">1 Million Members</h3>
+                        <p class="text-gray-600 mb-2">Celebrated our growing global community with new features and initiatives.</p>
+                        <span class="text-sm text-purple-600 font-medium">Today</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+-->
+        <!-- CTA Section -->
+        <section class="gradient-bg text-white rounded-2xl p-8 md:p-12 text-center">
+            <h2 class="text-3xl font-bold mb-4">Ready to Join Our Community?</h2>
+            <p class="max-w-2xl mx-auto mb-8 opacity-90">
+                Become part of a growing network of creators, thinkers, and doers who are shaping the future of social connection.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="px-8 py-3 bg-white text-purple-600 rounded-full font-bold hover:bg-purple-100 transition">
+                    Sign Up Now
+                </button>
+                <button class="px-8 py-3 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:bg-opacity-10 transition">
+                    Learn More
+                </button>
+            </div>
         </section>
     </main>
 
-    <footer>
-        <p> 2024–2025 Zaprofit. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center">
+                            <i class="fas fa-rocket text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">Zaprofit</span>
+                    </div>
+                    <p class="text-gray-400">
+                        Connecting people through meaningful interactions since 2018.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="https://zaprofit.github.io/home/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="#" class="hover:text-white transition">About</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white transition">Safety</a></li>
+                        <li><a href="#" class="hover:text-white transition">Community Guidelines</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Stay Connected</h3>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Subscribe to our newsletter for updates
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+                <p> 2024 - 2025 Zaprofit. All rights reserved.</p>
+            </div>
+        </div>
     </footer>
 
+    <script>
+        // Simple animation for stats counter
+        document.addEventListener('DOMContentLoaded', function() {
+            const statCards = document.querySelectorAll('.stat-card');
+            
+            statCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    const icon = this.querySelector('div');
+                    icon.classList.add('animate-pulse');
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    const icon = this.querySelector('div');
+                    icon.classList.remove('animate-pulse');
+                });
+            });
+            
+            // Mobile menu toggle (would need more implementation)
+            const mobileMenuButton = document.querySelector('button.md\\:hidden');
+            mobileMenuButton.addEventListener('click', function() {
+                alert('Mobile menu would open here in a full implementation');
+            });
+        });
+    </script>
 </body>
 </html>
